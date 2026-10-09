@@ -6,6 +6,7 @@ import { TaskForm } from '../features/tasks/client/components/TaskForm.jsx';
 import { TaskFilters } from '../features/tasks/client/components/TaskFilters.jsx';
 import { TaskList } from '../features/tasks/client/components/TaskList.jsx';
 import { TaskEditModal } from '../features/tasks/client/components/TaskEditModal.jsx';
+import { LucideIcon } from '../shared/components/LucideIcon.jsx';
 import { useTasks } from '../features/tasks/client/hooks/useTasks.js';
 import './App.css';
 
@@ -28,6 +29,7 @@ export function App() {
 
   const [editingTask, setEditingTask] = useState(null);
   const [deletingTask, setDeletingTask] = useState(null);
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   const handleEditClick = (task) => {
     setEditingTask(task);
@@ -46,15 +48,40 @@ export function App() {
 
   return (
     <div className="app-layout">
-      {/* Sidebar on the left */}
+      {/* Sidebar (desktop sticky & mobile off-canvas drawer) */}
       <Sidebar
         activeTab={activeTab}
         onSelectTab={setActiveTab}
         counts={stats}
+        isOpen={mobileNavOpen}
+        onClose={() => setMobileNavOpen(false)}
       />
 
       {/* Main Content Area on the right */}
       <main className="app-main-content">
+        {/* Mobile Top Bar (visible only on mobile screens <= 768px) */}
+        <div className="mobile-top-bar">
+          <button
+            type="button"
+            className="mobile-hamburger-btn"
+            onClick={() => setMobileNavOpen(true)}
+            aria-label="Open Navigation"
+          >
+            <LucideIcon name="Menu" size={22} className="hamburger-icon" />
+          </button>
+
+          <div className="mobile-brand-title">
+            <div className="mobile-brand-icon">
+              <LucideIcon name="Check" size={16} color="#FFFFFF" strokeWidth={3} />
+            </div>
+            <span>My Tasks</span>
+          </div>
+
+          <div className="mobile-task-count-pill">
+            {stats.total} Tasks
+          </div>
+        </div>
+
         <div className="main-container">
           {/* Top Greeting and Date Header */}
           <Header />

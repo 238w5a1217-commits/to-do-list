@@ -51,6 +51,7 @@
   border-radius: var(--radius-md);
   font-size: 0.92rem;
   font-weight: 700;
+  cursor: pointer;
 }
 
 .btn-cancel {
@@ -70,4 +71,27 @@
 
 .btn-danger:hover {
   background-color: #DC2626;
+}
+
+@media (max-width: 640px) {
+  .confirm-dialog {
+    max-width: calc(100% - 24px);
+    padding: 22px 18px 18px 18px;
+    border-radius: var(--radius-lg);
+  }
+
+  .confirm-message {
+    margin-bottom: 18px;
+    font-size: 0.88rem;
+  }
+
+  .confirm-actions {
+    flex-direction: column-reverse;
+    gap: 8px;
+  }
+
+  .confirm-actions button {
+    width: 100%;
+    padding: 12px;
+  }
 }

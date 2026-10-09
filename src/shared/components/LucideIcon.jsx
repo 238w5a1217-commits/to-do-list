@@ -26,7 +26,8 @@ import {
   AlertCircle,
   X,
   RefreshCw,
-  FolderPlus
+  FolderPlus,
+  Menu
 } from 'lucide-react';
 
 const ICON_MAP = {
@@ -56,7 +57,8 @@ const ICON_MAP = {
   AlertCircle,
   X,
   RefreshCw,
-  FolderPlus
+  FolderPlus,
+  Menu
 };
 
 export const LucideIcon = ({ name, size = 18, color, className = '', strokeWidth = 2, ...props }) => {

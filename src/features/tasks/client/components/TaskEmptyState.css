@@ -46,8 +46,36 @@
   color: var(--primary-blue);
   border: 1px solid var(--border-color);
   transition: all var(--transition-fast);
+  cursor: pointer;
 }
 
 .btn-empty-reset:hover {
   background-color: var(--bg-pill-hover);
+}
+
+@media (max-width: 640px) {
+  .task-empty-state {
+    padding: 40px 16px;
+    border-radius: var(--radius-lg);
+  }
+
+  .empty-icon-circle {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 12px;
+  }
+
+  .empty-title {
+    font-size: 1.05rem;
+  }
+
+  .empty-description {
+    font-size: 0.88rem;
+    margin-bottom: 16px;
+  }
+
+  .btn-empty-reset {
+    width: 100%;
+    max-width: 240px;
+  }
 }

@@ -9,7 +9,7 @@
 .filter-pills-group {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   flex-wrap: wrap;
 }
 
@@ -26,6 +26,7 @@
   color: var(--text-secondary);
   box-shadow: var(--shadow-sm);
   transition: all var(--transition-fast);
+  white-space: nowrap;
 }
 
 .filter-pill-btn:hover {
@@ -106,8 +107,26 @@
   .task-filters-bar {
     flex-direction: column;
     align-items: stretch;
+    gap: 12px;
+    margin-bottom: 20px;
   }
+
+  .filter-pills-group {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 4px;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+  }
+
+  .filter-pill-btn {
+    padding: 7px 14px;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+  }
+
   .search-input-wrapper {
     width: 100%;
+    min-width: 0;
   }
 }
