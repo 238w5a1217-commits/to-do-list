@@ -1,0 +1,53 @@
+.task-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 24px;
+  background-color: var(--bg-card);
+  border: 1px dashed var(--border-color);
+  border-radius: var(--radius-xl);
+  margin-top: 12px;
+}
+
+.empty-icon-circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: var(--primary-blue-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.empty-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.empty-description {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  max-width: 420px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.btn-empty-reset {
+  padding: 9px 20px;
+  border-radius: var(--radius-md);
+  font-size: 0.88rem;
+  font-weight: 600;
+  background-color: var(--bg-pill);
+  color: var(--primary-blue);
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-fast);
+}
+
+.btn-empty-reset:hover {
+  background-color: var(--bg-pill-hover);
+}

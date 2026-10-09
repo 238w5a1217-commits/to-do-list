@@ -1,0 +1,114 @@
+.task-form-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-xl);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 28px;
+  position: relative;
+  transition: all var(--transition-fast);
+}
+
+.task-form-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.task-form-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.task-form-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+/* Form Inputs Row */
+.task-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 16px;
+  align-items: center;
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.task-input {
+  width: 100%;
+  padding: 13px 16px 13px 44px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.task-input:hover {
+  border-color: #CBD5E1;
+}
+
+.btn-add-task {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--primary-blue);
+  color: #FFFFFF;
+  padding: 13px 24px;
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  font-weight: 700;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+  transition: all var(--transition-fast);
+}
+
+.btn-add-task:hover:not(:disabled) {
+  background-color: var(--primary-blue-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
+}
+
+.btn-add-task:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-error-banner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  background-color: var(--danger-bg);
+  border: 1px solid var(--danger-border);
+  color: var(--danger-color);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .task-form-row {
+    grid-template-columns: 1fr;
+  }
+  .btn-add-task {
+    justify-content: center;
+  }
+}

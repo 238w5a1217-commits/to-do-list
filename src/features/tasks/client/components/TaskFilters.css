@@ -1,0 +1,113 @@
+.task-filters-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.filter-pills-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.filter-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: var(--radius-full);
+  font-size: 0.9rem;
+  font-weight: 600;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+}
+
+.filter-pill-btn:hover {
+  background-color: var(--bg-pill-hover);
+  color: var(--text-primary);
+}
+
+/* All Tasks Active */
+.filter-pill-btn.active-all {
+  background-color: var(--primary-blue);
+  border-color: var(--primary-blue);
+  color: #FFFFFF;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
+}
+
+/* Pending Active */
+.filter-pill-btn.active-pending {
+  background-color: var(--pending-bg);
+  border-color: var(--pending-border);
+  color: var(--pending-color);
+}
+
+/* Completed Active */
+.filter-pill-btn.active-completed {
+  background-color: var(--success-bg);
+  border-color: var(--success-border);
+  color: var(--success-color);
+}
+
+/* Search Bar on Right */
+.search-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-width: 260px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 36px 10px 40px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.search-input:hover {
+  border-color: #CBD5E1;
+}
+
+.search-clear-btn {
+  position: absolute;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border-radius: 50%;
+  transition: background-color var(--transition-fast);
+}
+
+.search-clear-btn:hover {
+  background-color: var(--bg-pill);
+}
+
+@media (max-width: 768px) {
+  .task-filters-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .search-input-wrapper {
+    width: 100%;
+  }
+}

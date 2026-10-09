@@ -1,0 +1,24 @@
+.app-layout {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-app);
+}
+
+.app-main-content {
+  flex: 1;
+  padding: 36px 48px;
+  overflow-y: auto;
+  max-height: 100vh;
+}
+
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .app-main-content {
+    padding: 24px 20px;
+  }
+}
