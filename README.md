@@ -134,7 +134,7 @@ Create a `.env` file in the root directory (or use the preconfigured one):
 
 ```env
 PORT=5000
-MONGODB_URI=mongodb+srv://do:Nagoor271@test.gg7r1on.mongodb.net/todo_app?retryWrites=true&w=majority&appName=Test
+MONGODB_URI=
 NODE_ENV=development
 ```
 
