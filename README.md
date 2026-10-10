@@ -210,3 +210,27 @@ curl -X PATCH http://localhost:5000/api/tasks/<TASK_ID>/toggle
 ```bash
 curl -X DELETE http://localhost:5000/api/tasks/<TASK_ID>
 ```
+
+---
+
+## 🤖 AI Development Experience & Tooling
+
+### 1. Tool Selection
+- **Selected Tool**: **Code0**
+
+### 2. AI Development Experience
+- **Experience**: 1 year of hands-on experience with AI-assisted software engineering.
+- **Overview**: Code0 was utilized throughout the development lifecycle as an intelligent pair programmer. It accelerated full-stack development by assisting with architectural vertical slicing, boilerplate reduction, generating Express routes and Mongoose schemas, building responsive React components, implementing smart categorization algorithms, and debugging full-stack API integration.
+
+### 3. Specific Tasks Completed Using Code0
+1. **Component Development & Modern UI Design**:
+   - Designed and built modular React components (`TaskCard`, `TaskForm`, `TaskEditModal`, `TaskList`, `Sidebar`, `Header`) adhering to modern SaaS design aesthetics with Lucide icon integration and dark/light mode theming.
+2. **REST API Creation & Backend Architecture**:
+   - Structured and implemented Express RESTful API endpoints (`GET`, `POST`, `PUT`, `DELETE /api/tasks`, and `PATCH /api/tasks/:id/toggle`), along with controller validations and centralized error-handling middleware.
+3. **Database Integration & Data Modeling**:
+   - Created the Mongoose Task schema (`task.model.js`) and database connection logic with MongoDB Atlas, including automated fallback seeding for immediate onboarding.
+4. **Smart Logic & Heuristics Implementation**:
+   - Built the real-time keyword-based category auto-detection utility (`categoryDetector.js`) that analyzes task descriptions and automatically assigns relevant categories (Tech, Fitness, Career, Shopping, etc.).
+5. **Full-Stack Refactoring & Debugging**:
+   - Configured Vite API proxy settings for seamless client-server communication, unified CSS design variables across components, and refined state management with optimistic UI updates in `useTasks.js`.
+
